@@ -3,7 +3,6 @@ package com.technews.technewsjavaapi.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.*;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
@@ -12,6 +11,7 @@ import java.util.Objects;
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "user")
+
 public class User implements Serializable {
 
     @Id
@@ -21,13 +21,16 @@ public class User implements Serializable {
     @Column(unique = true)
     private String email;
     private String password;
-
     @Transient
     boolean loggedIn;
+
+
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Post> posts;
-    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
     private List<Vote> votes;
+
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Comment> comments;
 
@@ -40,6 +43,7 @@ public class User implements Serializable {
         this.email = email;
         this.password = password;
     }
+
     public Integer getId() {
         return id;
     }
