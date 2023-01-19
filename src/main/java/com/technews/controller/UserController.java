@@ -1,9 +1,9 @@
-package com.technews.technewsjavaapi.controller;
+package com.technews.controller;
 
-import com.technews.technewsjavaapi.model.Post;
-import com.technews.technewsjavaapi.model.User;
-import com.technews.technewsjavaapi.repository.UserRepository;
-import com.technews.technewsjavaapi.repository.VoteRepository;
+import com.technews.model.Post;
+import com.technews.model.User;
+import com.technews.repository.UserRepository;
+import com.technews.repository.VoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCrypt;
@@ -15,7 +15,7 @@ import java.util.List;
 public class UserController {
 //    autowired helps scan the project for objects to be instantiated as neede
     @Autowired
-    UserRepository repository;
+UserRepository repository;
 
     @Autowired
     VoteRepository voteRepository;

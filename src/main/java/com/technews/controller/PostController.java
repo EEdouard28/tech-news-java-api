@@ -1,11 +1,11 @@
-package com.technews.technewsjavaapi.controller;
+package com.technews.controller;
 
-import com.technews.technewsjavaapi.model.Post;
-import com.technews.technewsjavaapi.model.User;
-import com.technews.technewsjavaapi.model.Vote;
-import com.technews.technewsjavaapi.repository.PostRepository;
-import com.technews.technewsjavaapi.repository.UserRepository;
-import com.technews.technewsjavaapi.repository.VoteRepository;
+import com.technews.model.Post;
+import com.technews.model.User;
+import com.technews.model.Vote;
+import com.technews.repository.PostRepository;
+import com.technews.repository.UserRepository;
+import com.technews.repository.VoteRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

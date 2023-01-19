@@ -1,4 +1,4 @@
-package com.technews.technewsjavaapi.model;
+package com.technews.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;

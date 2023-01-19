@@ -1,4 +1,4 @@
-package com.technews.technewsjavaapi;
+package com.technews;
 
 
 import org.springframework.boot.SpringApplication;
